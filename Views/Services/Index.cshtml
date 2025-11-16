@@ -1,0 +1,33 @@
+@model IEnumerable<SpinCycleLaundryHub.Models.Service>
+
+@{
+    ViewData["Title"] = "Services";
+}
+
+<h2 class="fw-bold text-primary mb-4">Laundry Services</h2>
+
+<a href="/Services/Create" class="btn btn-primary mb-3">Add Service</a>
+
+<table class="table table-bordered shadow-sm">
+    <thead class="table-primary">
+        <tr>
+            <th>Name</th>
+            <th>Price (₱)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Name</td>
+                <td>@s.Price</td>
+                <td>
+                    <a href="/Services/Edit/@s.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/Services/Delete/@s.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

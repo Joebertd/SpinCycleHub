@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container py-5">
+    <h2 class="fw-bold mb-4 text-primary">Dashboard</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow border-0 p-4 text-center rounded-4 bg-info text-white">
+                <h3>@ViewBag.ServicesCount</h3>
+                <p>Services Available</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow border-0 p-4 text-center rounded-4 bg-warning text-white">
+                <h3>@ViewBag.OrdersCount</h3>
+                <p>Total Orders</p>
+            </div>
+        </div>
+    </div>
+</div>

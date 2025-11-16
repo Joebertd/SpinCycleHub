@@ -1,0 +1,11 @@
+@model SpinCycleLaundryHub.Models.Order
+
+<h2>Order Details</h2>
+
+<div class="card p-4 shadow-lg rounded-4 mb-4">
+    <p><strong>Customer:</strong> @Model.CustomerName</p>
+    <p><strong>Service:</strong> @Model.Service?.Name</p>
+    <p><strong>Price:</strong> ₱@Model.TotalPrice</p>
+</div>
+
+<a href="/Orders" class="btn btn-secondary">Back</a>

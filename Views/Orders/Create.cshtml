@@ -1,0 +1,22 @@
+@model SpinCycleLaundryHub.Models.Order
+
+<h2>Create Order</h2>
+
+<form method="post" class="card p-4 shadow rounded-4">
+    <div class="mb-3">
+        <label>Customer Name</label>
+        <input asp-for="CustomerName" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Select Service</label>
+        <select asp-for="ServiceId" class="form-select">
+            @foreach (var s in ViewBag.Services)
+            {
+                <option value="@s.Id">@s.Name - ₱@s.Price</option>
+            }
+        </select>
+    </div>
+
+    <button class="btn btn-primary">Create</button>
+</form>
